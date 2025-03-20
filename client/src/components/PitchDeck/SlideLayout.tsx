@@ -85,9 +85,12 @@ const SlideLayout: React.FC<SlideLayoutProps> = ({
   // For slide 1, keep original spacing, for slides 2-18 reduce the top spacing
   const isFirstSlide = slideNumber === 1;
   
+  // Create a class for adding extra bottom padding for mobile on all slides except slide 1
+  const mobileBottomClass = (!isFirstSlide && isMobile) ? 'pb-16' : '';
+  
   return (
     <div 
-      className="slide-layout min-h-screen w-full bg-white flex flex-col items-center justify-start p-4 sm:p-6 md:p-10 relative overflow-x-hidden"
+      className={`slide-layout min-h-screen w-full bg-white flex flex-col items-center justify-start p-4 sm:p-6 md:p-10 relative overflow-x-hidden ${mobileBottomClass}`}
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
@@ -132,7 +135,7 @@ const SlideLayout: React.FC<SlideLayoutProps> = ({
         
         {/* Content - Centered and scaled on desktop, normal scroll on mobile */}
         <motion.div 
-          className="flex-grow flex items-start md:items-center justify-center w-full"
+          className={`flex-grow flex items-start md:items-center justify-center w-full ${isMobile && !isFirstSlide ? 'mb-4' : ''}`}
           variants={scaleUpVariants}
           initial="hidden"
           animate="visible"

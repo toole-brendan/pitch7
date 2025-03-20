@@ -33,8 +33,8 @@ const Slide10: React.FC = () => {
       slideNumber={10} 
       totalSlides={TOTAL_SLIDES}
     >
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-220px)] pt-3">
-        <div className="grid grid-cols-3 gap-4 w-full max-w-5xl">
+      <div className="flex flex-col items-center justify-center mt-6 sm:mt-8 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-5xl">
           {/* Column 1: Interface Design */}
           <ModernCard className="p-0 border border-gray-200 h-full">
             <div className="p-3 border-b border-gray-200">
@@ -44,7 +44,7 @@ const Slide10: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-black w-full h-[calc(100%-50px)] flex items-center justify-center">
+            <div className="bg-black w-full aspect-[3/4] sm:h-[calc(100%-50px)] flex items-center justify-center">
               <img 
                 src="assets/images/HR.png" 
                 alt="HandReceipt Dashboard Interface" 
@@ -150,7 +150,7 @@ const Slide10: React.FC = () => {
             </div>
             
             {/* Vertical workflow with connecting line */}
-            <div className="relative flex flex-col justify-between items-center h-[calc(100%-45px)] py-2">
+            <div className="relative flex flex-col justify-between items-center h-[300px] sm:h-[calc(100%-45px)] py-2">
               {/* Connecting line */}
               <div className="absolute w-[1px] bg-gray-200 top-0 bottom-0 left-[50%] z-0"></div>
               

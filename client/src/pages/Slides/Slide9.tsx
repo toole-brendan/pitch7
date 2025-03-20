@@ -18,7 +18,7 @@ const Slide9: React.FC = () => {
       slideNumber={9} 
       totalSlides={TOTAL_SLIDES}
     >
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-220px)]">
+      <div className="flex flex-col items-center justify-center mt-6 sm:mt-8 mb-4">
         <div className="flex flex-col gap-5 w-full max-w-5xl">
           {/* Core Capabilities */}
           <div>

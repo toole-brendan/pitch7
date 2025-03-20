@@ -19,7 +19,7 @@ const Slide3: React.FC = () => {
       slideNumber={3} 
       totalSlides={TOTAL_SLIDES}
     >
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-220px)]">
+      <div className="flex flex-col items-center justify-center mt-6 sm:mt-8 mb-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
           {/* Military Sector */}
           <div>
